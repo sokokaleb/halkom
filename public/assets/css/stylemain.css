@@ -1,0 +1,544 @@
+html {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  position: relative;
+  min-height: 100%;
+	height: 100%
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #555;
+  text-rendering: optimizeLegibility;
+  min-width: 320px;
+	background-color: #eee;
+}
+body a {
+	text-decoration: none;
+}
+
+/* configuring navbar */
+#navbar.ui.menu {
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 0px;
+	-moz-box-shadow: 0 3px 2px 1px #999;
+  -webkit-box-shadow: 0 3px 2px 1px #999;
+  box-shadow: 0 3px 2px 1px #999;
+}
+#navbar.ui.menu a.item {
+	line-height: 29px;
+}
+#navbar.ui.menu > .item.sitetitle {
+	font-size: 14pt;
+	font-family: 'Merriweather', serif;
+	color: white;
+	cursor: pointer;
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+#navbar.ui.menu > .sitenavshow > .right.item {
+	line-height: 29px;
+	margin-top: -2px;
+}
+#navbar.ui.menu > .sitenavshow > .right.item > .icon.input {
+	vertical-align: middle;
+}
+#navbar.ui.menu > .sitenavhidden {
+	display: none;
+	float: right;
+	margin-top: 6px;
+}
+#navbar.ui.menu .item > .label {
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: #555;
+}
+#navbar.ui.menu .active.item > .label {
+	background-color: #777;
+}
+
+@media only screen and (max-width: 992px) {
+	#navbar.ui.menu span.sitenavsearch {
+		display: none;
+	}
+}
+@media only screen and (max-width: 720px) {
+	#navbar.ui.menu span.sitenavlink {
+		display: none;
+	}
+	#navbar.ui.menu span.sitenavhidden {
+		display: inline;
+	}
+}
+
+/* configuring mainstage major elements */
+#mainstage {
+	display: table;
+	margin-top: 30px;
+	width: 100%;
+}
+#sidebar {
+	display: table-cell;
+	min-width: 300px;
+}
+#contentbar {
+	display: table-cell;
+	width: auto;
+}
+
+/* configuring sidebar */
+#sidebar > .segment {
+	margin-bottom: 30px;
+}
+#sidebar p {
+	font-size: 10pt;
+}
+#sidebar .message {
+	padding: 1em;
+}
+#sidebar .message a {
+	color: #88a;
+}
+#sidebar .message a:hover {
+	color: #55c;
+	transition: color 0.2s ease;
+}
+
+/* configuring sidebar: user profile */
+#userprofile .detailscont {
+	display: table;
+	height: 4em;
+	margin-bottom: 1em;
+}
+#userprofile .avatarcont {
+	display: table-cell;
+	vertical-align: middle;
+	margin-right: 0.5em;
+	float: left;
+	width: 4em;
+	height: 4em;
+}
+#userprofile .avatar {
+	border-radius: 5px;
+	width: 100%;
+}
+#userprofile .namecont {
+	display: table-cell;
+	vertical-align: top;
+	background-color: #f1f1f1;
+	width: 100%;
+	min-height: 4em;
+	padding: 0.5em 1em;
+	border-radius: 5px;
+}
+#userprofile .namecont .username {
+	font-size: 14pt;
+	font-weight: bold;
+	margin-bottom: 0.1em;
+}
+#userprofile .namecont .handlename {
+	color: #888;
+	font-size: 11pt;
+}
+#userprofile .vertical.menu {
+	width: 100%;
+}
+#userprofile .icon {
+	width: 1em;
+}
+
+
+/* configuring sidebar: calendar */
+#milecalendar {
+	width: 100%;
+	margin: 1em 0 0.4em;
+	border-collapse: collapse;
+	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	table-layout: fixed;
+}
+#milecalendar thead {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.03);	
+}
+#milecalendar th {
+	background-color: #eee;
+	padding: 0.3em 0.5em;
+}
+#milecalendar th:first-child {
+	border-radius: 5px 0 0;
+}
+#milecalendar th:last-child {
+	border-radius: 0 5px 0 0;
+}
+#milecalendar tr:nth-child(even) td {
+	background-color: #f6f6f6;
+}
+#milecalendar th,
+#milecalendar td {
+	text-align: center;
+}
+#milecalendar th.r,
+#milecalendar td.r {
+	color: #d00;
+}
+#milecalendar th.b,
+#milecalendar td.b {
+	color: #00d;
+}
+#milecalendar td.td {
+	font-weight: bold;
+	text-shadow: 0 0 0.2em lightgray, 0 0 0.2em lightgray;
+}
+#milecalendar div.ev {
+	background-image: url("../img/circle.png");
+	background-size: 100% 100%;
+	border-radius: 5px;
+	height: 100%;
+}
+
+/* configuring sidebar: calendar entries */
+table#milecalendarinfo {
+	margin-bottom: 1.5em;
+	font-size: 10pt;
+	border-collapse: separate;
+}
+#milecalendarinfo th {
+	width: 24px;
+	vertical-align: top;
+	text-align: right;
+	padding-right: 5px;
+}
+#milecalendarinfo a {
+	color: #555;
+}
+#milecalendarinfo td {
+	padding-left: 0.5em;
+}
+#milecalendarinfo tr:hover th {
+	font-size: 12pt;
+	color: orange;	
+	background-color: rgba(255,255,0,0.2);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-webkit-border-radius: 7px;
+	transition: background-color 0.2s ease, font-size 0.2s ease;
+}
+#milecalendarinfo tr:hover td {
+	background-color: rgba(255,255,0,0.2);
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	transition: background-color 0.2s ease, padding 0.2s ease;
+}
+
+/* configuring sidebar: side feeds */
+#sidefeed .item {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#sidefeed .item,
+#sidefeed i.icon,
+#sidefeed a {
+	font-size: 10pt;
+	color: #555;
+	line-height: 14pt;
+}
+#sidefeed span.header {
+	color: #564F8A;
+	font-size: 11pt;
+}
+#sidefeed div.description {
+	color: #555;
+}
+#sidefeed div.details {
+	color: #555;
+	padding-top: 0.2em;
+}
+
+#sidefeed .item:hover {
+	background-color: rgba(255,255,0,0.2);
+	border-radius: 5px;
+	transition: background-color 0.2s ease;
+}
+#sidefeed .item:hover > .icon {
+	font-size: 20pt;
+	color: orange;
+	margin-right: 0.5em;
+	padding-top: 0.3em;
+	transition: color 0.2s ease, margin-right 0.2s ease, padding-top 0.2s ease;
+}
+#sidefeed .item:hover span.header,
+#sidefeed .item:hover div.details,
+#sidefeed .item:hover div.details .icon {
+	color: darkorange;
+	transition: none;
+}
+
+/* styling site footer */
+#sitefooter {
+	color: #aaa;
+	text-align: center;
+	margin-top: 2em;
+}
+#sitefooter a {
+	color: #99f;
+}
+#sitefooter a:hover {
+	color: #55f;
+}
+
+
+/* ===============<< CONTENT >>=============== */
+
+#maincontent .bannercontainer {
+	max-height: 18em;
+	overflow-y: hidden;
+	width: auto;
+	position: relative;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+#maincontent img.compbanner {
+	width: 100%;
+}
+#maincontent .horizontal.icon.divider {
+	margin-top: 36px;
+}
+
+.bannercontainer .ui.label {
+	border-color: #ddd;
+}
+.bannercontainer .ui.label:hover {
+	border-color: #eee;
+}
+
+/* styling modal */
+#modalclose {
+	float:right;
+	cursor:pointer;
+}
+#modalbannercont {
+	padding: 10px;
+}
+
+/* styling competition footer */
+#maincontent div.compfooter.left {
+	float: left;
+}
+#maincontent div.compfooter.right {
+	float: right;
+}
+#maincontent .compfooter p {
+	margin-top: 0.3em;
+	color: grey;
+	font-size: 10pt;
+}
+#maincontent .compfooter a {
+	color: #55c;
+}
+#maincontent .compfooter a:hover {
+	color: #88f;
+}
+
+/* styling comment items */
+#maincomment > p.commentnumbar {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+#maincomment > p.commentnumbar > a {
+	cursor: pointer;
+	color: #55c;
+}
+#maincomment > p.commentnumbar > a:hover {
+	color: #88f;
+}
+#maincomment > p.commentnumbar i.icon {
+	margin-right: 0;
+}
+#commentavatar.avatar img {
+	border-radius: 5px;
+	width: 3.2em;
+	height: 3.2em;
+}
+#commentauthor.author {
+	color: #009FDA;
+}
+#commentauthor.author:hover {
+	color: #00BAFF;
+}
+#commentcontent {
+	padding-top: 0px;
+	padding-bottom: 6px;
+}
+
+/* styling comment input box */
+#commentboxcont {
+	padding-top: 36px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+#commentboxcont textarea {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: 11pt;
+	min-height: 10px;
+	height: 80px;
+}
+#commentuser {
+	color: #aaa;
+	margin-bottom: 10px;
+}
+
+
+/* ===============<< FORM >>=============== */
+
+/* styling registration form */
+#regisform {
+	margin: 2em 1em;
+}
+
+/* styling profile edit form */
+#regisform .section {
+	margin-top: 30px;
+}
+#regisform .file {
+	margin-top: 0.5em;
+	padding: 0.4em;
+	width: 100%;
+	background-color: #f4f4f4;
+	border-radius: 0.2em;
+}
+
+#profiletab.tabular.menu {
+	display: none;
+}
+
+
+/* ===============<< LISTING >>=============== */
+
+#contentbar .headstat {
+	margin-top: 1.5em;
+}
+
+/* styling cards */
+.card.item {
+	height: 24em;
+	margin-bottom: 20px !important;
+}
+.card.item .image {
+	height: 10em;
+	overflow: hidden;
+}
+.card.item .content {
+	overflow: hidden;
+	height: 10em;
+}
+.card.item .status {
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-left: 0.5em;
+	color: rgba(0, 0, 0, 0.6);
+}
+.card.item .status .tag {
+	float: right;
+	border-radius: 3px;
+	padding: 5px;
+	margin-left: 3px;
+	margin-top: -5px;
+}
+.card.item .status .ended.tag {
+	background-color: #ddd;
+}
+
+/* handling responsivity */
+@media only screen and (max-width: 992px) {
+	#contentbar {
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+	}
+	.card.item {
+		min-height: 0 !important;
+		height: 18em;
+	}
+	.card.item .image {
+		height: 6em;
+	}
+	.card.item .content {
+		font-size: 10pt;
+		height: 10em;
+	}
+	.card.item .content .name {
+		font-size: 10pt !important;
+	}
+	.card.item .status {
+		font-size: 10pt;
+	}
+	.card.item .status .tag {
+		display: none;
+	}
+}
+
+
+/* ===============<< SEMANTICFIX >>=============== */
+
+/* fixing items */
+.ui.three.items > a > .item {
+  width: 31.333%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.ui.items > a > .item {
+  float: left;
+  padding: 0em;
+  background-color: #FFFFFF;
+  line-height: 1.2;
+  font-size: 1em;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  border-bottom: 0.2em solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.33em;
+  -webkit-transition: -webkit-box-shadow 0.2s ease;
+  -moz-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  padding: 0.5em;
+}
+.ui.items .item:hover {
+  cursor: pointer;
+  z-index: 5;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+.ui.items .item:first-child:hover {
+  border-bottom-color: #fb0 !important;
+}
+
+/* fixing group buttons */
+.ui.buttons a .button {
+  float: left;
+  border-radius: 0em !important;
+}
+.ui.buttons a:first-child .button {
+	border-top-left-radius: 0.25em !important;
+	border-bottom-left-radius: 0.25em !important;
+}
+.ui.buttons a:last-child .button {
+	border-top-right-radius: 0.25em !important;
+	border-bottom-right-radius: 0.25em !important;
+}
+
+/* fixing buttons */
+.ui.form input.ui.button {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	padding-top: 0.325em;
+	padding-bottom: 0.325em;
+}
+
+/* fixing labels */
+.ui.field label a {
+	color: #55C;
+}
+.ui.field label a:hover {
+	color: #88A;
+}
