@@ -202,6 +202,53 @@ class HomeController extends BaseController {
 	}
 
 	/**
+	 * Handles milestone dates request for the corresponding month of a year
+	 *
+	 * This function will return a JSON object containing milestones dates that 
+	 * corresponds to a specific month $month and year $year.
+	 * $month should be in range [0 .. 11] for [Jan .. Dec].
+	 *
+	 * The JSON object returned by this function will return these information:
+	 * > The starting day of the month (0 .. 6, Sunday .. Saturday)
+	 * > The number of day in the month (28..31)
+	 * > An array, containing with length exactly same as the number of day in
+	 *   the month, and indicating whether there is a milestone on the day.
+	 *   ex:
+	 *   If there's exist milestone(s) on the 25th day, the array will contain
+	 *   a [25 => true] value.
+	 * 
+	 * @param  int $month The month
+	 * @param  int $year  The year
+	 * @return json        array/object of milestones dates
+	 */
+	public function postGetMilestones($month, $year)
+	{
+		return Response::json( /* ... */ );
+	}
+
+	/**
+	 * Handles milestone list request for the corresponding month of a year
+	 *
+	 * This function will return a JSON object containing milestones that 
+	 * corresponds to a specific month $month and year $year.
+	 * $month should be in range [0 .. 11] for [Jan .. Dec].
+	 *
+	 * Each milestone data contained by the json object returned by this function
+	 * will contain data about:
+	 * > Competition id (title)
+	 * > Date (on the current month)
+	 * > Description of the milestone
+	 * 
+	 * @param  int $month The month
+	 * @param  int $year  The year
+	 * @return json        array/object of milestones
+	 */
+	public function postGetMilestones($month, $year)
+	{
+		return Response::json( /* ... */ );
+	}
+
+	/**
 	 * Test page handler
 	 */
 	
